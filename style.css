@@ -42,7 +42,7 @@ p{
 
     display: grid;
 
-    grid-template: 80px 1fr 1fr 45px / 360px;
+    grid-template: 80px 1fr 1fr 50px / 360px;
 }
 
 .icon__bg{
@@ -70,7 +70,9 @@ p{
 }
 
 .text__subtitle{
-    
+    color: hsl(217, 12%, 63%);
+
+    font-weight: 400;
 }
 
 .container-rate{
@@ -90,12 +92,14 @@ p{
 
     color: hsl(217, 12%, 63%);
 
+    font-weight: 700;
+
     width: 50px;
     height: 50px;
 }
 
 .container__btn{
-    border-radius: 30px;
+    border-radius: 25px;
     border: 0px;
 
     text-transform: uppercase;
