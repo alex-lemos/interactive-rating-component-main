@@ -1,0 +1,108 @@
+/* Reset CSS */
+
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-size: 100%;
+    list-style-type: none;
+}
+
+/* End Reset CSS */
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: hsl(216, 12%, 8%);
+    color: white;
+
+    font-family: 'Overpass', sans-serif;
+}
+
+p{
+    font-size: 15px;
+}
+
+.container{
+    background-color: hsl(213, 19%, 18%);
+
+    padding: 30px;
+
+    border-radius: 27px;
+
+    display: grid;
+
+    grid-template: 80px 1fr 1fr 45px / 360px;
+}
+
+.icon__bg{
+    display: inline-block;
+
+    background-color: hsla(214, 9%, 36%, 0.233);
+    background-image: url("./images/icon-star.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 50%;
+
+    width: 50px;
+    height: 50px;
+}
+
+.container-text{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.text__title{
+    font-size: 29px;
+}
+
+.text__subtitle{
+    
+}
+
+.container-rate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rate__num{
+    background-color: hsla(214, 9%, 36%, 0.233);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    color: hsl(217, 12%, 63%);
+
+    width: 50px;
+    height: 50px;
+}
+
+.container__btn{
+    border-radius: 30px;
+    border: 0px;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+
+    font-weight: 700;
+
+    background-color: hsl(25, 97%, 53%);
+}
