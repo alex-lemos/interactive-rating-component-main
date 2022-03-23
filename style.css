@@ -174,9 +174,11 @@ p{
     text-align: center;
 
     display: grid;
+    align-items: center;
 
     grid-template: 1fr 1fr 1fr / 360px;
 }
+
 
 
 

@@ -1,8 +1,16 @@
+"use strict";
+
 // GLOBAL
 
 let num = document.querySelectorAll(".rate__num");
 
-let btn = document.querySelector(".container__btn");
+let btn = document.querySelector(".c-rate__btn");
+
+let value
+
+let rate = document.querySelector(".c-thanks--rate");
+
+
 
 // EVENT
 
@@ -35,9 +43,23 @@ function modifyBg(){
         e.className = "rate__num";
     }
 
-    console.log(e.getAttribute("num"))
+    value = e.innerText;
+
+    console.log(value);
+
 }
 
 function thanksPageRedirect(){
-    location.href = "thanks.html"
+
+    localStorage.removeItem("rate");
+    
+    if (value != null){
+
+        localStorage.getItem("rate", value)
+
+        location.href = "thanks.html"
+
+    }
+    
 }
+
