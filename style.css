@@ -15,7 +15,7 @@ body{
 
 /* End Reset CSS */
 
-/* ------------------ Rating state start ------------------ */
+
 
 body{
     width: 100vw;
@@ -34,6 +34,12 @@ body{
 p{
     font-size: 15px;
 }
+
+.c--hidden{
+    display: none !important;
+}
+
+/* ------------------ Rating state start ------------------ */
 
 .c-rate{
     background-color: hsl(213, 19%, 18%);
@@ -64,7 +70,6 @@ p{
 .c-rate-text{
     display: flex;
     flex-direction: column;
-    /* gap: 15px; */
 }
 
 .text__title{
@@ -167,20 +172,56 @@ p{
 .c-thanks{
     background-color: hsl(213, 19%, 18%);
 
-    padding: 30px;
-
+    padding: 40px 30px 40px 30px;
+    
     border-radius: 27px;
 
     text-align: center;
 
     display: grid;
     align-items: center;
+    justify-items: center;
 
-    grid-template: 1fr 1fr 1fr / 360px;
+    grid-template: 1fr 90px 1fr / 360px;
+}
+
+.c-thanks__status{
+    background-color: hsla(214, 9%, 36%, 0.233);
+
+    max-width: 100%;
+
+    padding: 8px 25px 8px 25px;
+
+    color: hsl(25, 97%, 53%);
+
+    border-radius: 20px;
+}
+
+.text__subtitle--margin{
+    margin: 0px 10px 0px 10px;
 }
 
 
-
-
-
 /* ------------------ Thank you state end ------------------ */
+
+/* ------------------ Mobile ------------------ */
+
+@media screen and (max-width: 475px){
+    .c-rate{
+        grid-template: 85px 1fr 100px 50px / 300px;
+
+        border-radius: 15px;
+    }
+
+    .c-thanks{
+        grid-template: 1fr 90px 1fr / 300px;
+
+        border-radius: 15px;
+
+        padding: 35px 20px 35px 20px;
+    }
+
+    .text__subtitle--margin{
+        margin: 0px 5px 0px 5px;
+    }
+}

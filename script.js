@@ -10,7 +10,9 @@ let value
 
 let rate = document.querySelector(".c-thanks--rate");
 
+let cardRate = document.querySelector(".c-rate");
 
+let cardThanks = document.querySelector(".c-thanks");
 
 // EVENT
 
@@ -28,38 +30,34 @@ function modifyBg(){
 
     // I reset the rating
     num.forEach(function(element){
-        if (element.className != "rate__num"){
-            element.className = "rate__num"
-        }
+        element.classList.replace("rate__num--selected", "rate_num")
     })
     
     // Save the element I clicked
     let e = this
     
     //I apply the change to the clicked review
-    if (e.className == "rate__num"){
-        e.className = "rate__num--selected";
-    } else {
-        e.className = "rate__num";
-    }
+    e.classList.toggle("rate__num--selected");
 
     value = e.innerText;
-
-    console.log(value);
 
 }
 
 function thanksPageRedirect(){
 
-    localStorage.removeItem("rate");
-    
+    // I verify if one rating selected
     if (value != null){
+        
+        // If yes, rating receive value selected
+        rate.innerText = value
 
-        localStorage.getItem("rate", value)
+        // I hide the rating card
+        cardRate.classList.toggle("c--hidden");
 
-        location.href = "thanks.html"
+        // I make the thank you card visible
+        cardThanks.classList.toggle("c--hidden");
+        
+    } // If not... nothing
 
-    }
-    
 }
 
